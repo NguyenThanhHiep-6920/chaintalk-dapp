@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-// Import file Providers bạn vừa tạo
-import { Providers } from "../components/Providers";
+import { ClientLayout } from "../components/ClientLayout"; // ← Dùng cái này thay vì Providers
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Bọc toàn bộ nội dung web vào trong Providers */}
-        <Providers>
+        <ClientLayout>
           {children}
-        </Providers>
+        </ClientLayout>
       </body>
     </html>
   );
