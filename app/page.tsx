@@ -1,4 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { XmtpConnect } from '../components/XmtpConnect';
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       {/* Khu vực hiển thị nút Connect */}
       <div className="p-8 bg-gray-900 rounded-2xl shadow-2xl border border-gray-800">
         <ConnectButton />
+
+        {/* Component này sẽ tự động hiện ra sau khi ví kết nối */}
+        <XmtpConnect />
       </div>
 
       {/* Footer nhỏ */}
